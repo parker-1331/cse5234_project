@@ -7,8 +7,26 @@ import Col from 'react-bootstrap/Col';
 import Alert from 'react-bootstrap/Alert';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function DisplayOrderSummary(order) {
-    return (
+export function DisplayOrderSummary(order) {
+  
+  let productName = order.name;
+  let quantity = order.buyQuantity;
+  let price = order.price;
+
+  function GetItemCost(qty, index, array) {
+    return qty * price[index];
+  }
+
+  function GetTotalCost(total, itemCost, index, array) {
+    return total + itemCost;
+  }
+
+  let itemCost = quantity.map(GetItemCost);
+  let totalCost = itemCost.reduce(GetTotalCost);
+  
+  return (
+    <Container>
+      <Row><Col>
     <Table striped className="">
       <thead>
         <tr>
@@ -18,24 +36,29 @@ function DisplayOrderSummary(order) {
         </tr>
       </thead>
       <tbody>
-        {order.buyQuantity.map(function(quantity, index) {
-          return (<tr key={index}>
-            <td>{order.name[index]}</td>
-            <td>{order.buyQuantity[index]}</td>
-            <td>{order.price[index]}</td>
-          </tr>
+        {quantity.map(function(qty, index) {
+          return (
+            <tr key={index}>
+              <td>{productName[index]}</td>
+              <td>{qty}</td>
+              <td>{price[index]}</td>
+            </tr>
           )
         })}
       </tbody>
     </Table>
+    </Col></Row>
+    <Row>
+      <Col md={8}><h5>Total</h5></Col>
+      <Col md={4}><h5>${totalCost}</h5></Col>
+    </Row>
+    </Container>
     )
 }
 
 const ViewConfirmation = () => {
 
   const location = useLocation();
-
-  const red = {backgroundColor: "red", width: "100%", textAlign: "center"};
 
   return (
     <Container fluid={true}>
@@ -56,10 +79,9 @@ const ViewConfirmation = () => {
           <h3>Order Summary:</h3>
         </Col>
       </Row>
-      <Row>
-        <Col>
           {DisplayOrderSummary(location.state.order)}
-        </Col>
+      <Row>
+        <Col className="text-center">Feel free to close this window.</Col>
       </Row>
     </Container>
     
