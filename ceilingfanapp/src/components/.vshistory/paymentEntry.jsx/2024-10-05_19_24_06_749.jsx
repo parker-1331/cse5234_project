@@ -10,7 +10,7 @@ const PaymentEntry = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        navigate("/purchase/shippingEntry", { payment: payment, setPayment: setPayment });
+        navigate('/purchase/shippingEntry', { payment: payment, setPayment: setPayment });
     }
 
     return (

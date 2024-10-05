@@ -1,17 +1,11 @@
 import React from "react"
-import { useState } from "react"
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
 import { Container, Row, Col, Button, Stack, Table } from 'react-bootstrap';
 
 const PaymentEntry = () => {
 
     const location = useLocation();
-    const [payment, setPayment] = useState({ cardNum: '', expDate: '', ccv: '', cardName: '', });
-    const navigate = useNavigate();
-
-    const handleSubmit = (e) => {
-        navigate("/purchase/shippingEntry", { payment: payment, setPayment: setPayment });
-    }
+    const [payment, setPayment] = useState({ cardNum: '', expDate: '', ccv: '', cardName: '',});
 
     return (
        <div>
@@ -28,8 +22,6 @@ const PaymentEntry = () => {
            <br></br><br></br>
            <p>Name on card</p>
            <input name="nameOnCard" type="text" />
-            <br></br><br></br>
-            <button onClick={handleSubmit}>To Shipping</button>
        </div>
     );
 }

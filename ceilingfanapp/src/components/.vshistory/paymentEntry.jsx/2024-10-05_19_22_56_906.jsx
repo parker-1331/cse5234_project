@@ -10,7 +10,7 @@ const PaymentEntry = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        navigate("/purchase/shippingEntry", { payment: payment, setPayment: setPayment });
+        navigate('/purchase/shippingEntry', { payment: payment, setPayment: setPayment });
     }
 
     return (
@@ -28,8 +28,6 @@ const PaymentEntry = () => {
            <br></br><br></br>
            <p>Name on card</p>
            <input name="nameOnCard" type="text" />
-            <br></br><br></br>
-            <button onClick={handleSubmit}>To Shipping</button>
        </div>
     );
 }
