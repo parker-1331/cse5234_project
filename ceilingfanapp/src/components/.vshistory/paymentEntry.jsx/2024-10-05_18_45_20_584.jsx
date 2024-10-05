@@ -1,0 +1,16 @@
+import React from "react"
+import { useLocation } from 'react-router-dom'
+
+const PaymentEntry = () => {
+
+    const location = useLocation();
+
+    return (
+        <div>
+            <h1>Payment</h1>
+            <p>Input credit card number</p>
+            <input name="cardNum" type="text" required maxLength="16" />
+        </div>
+    );
+}
+export default PaymentEntry;

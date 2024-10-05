@@ -13,13 +13,18 @@ const PaymentEntry = () => {
                 <br></br>
                 <p>Credit card number</p>
                 <input name="cardNum" type="text" required maxLength="16" />
-                <br></br><br></br>
-                <p>Expiration date (MM/YY)</p>
-                <input name="expDate" type="text" required maxLength="5" size="8" />
-                <br></br><br></br>
-                <p>CCV</p>
-                <input name="ccv" type="text" required maxLength="3" size="8" />
-                <br></br><br></br>
+            </div>
+            <div>
+                <Container fluid>
+                <Row>
+                    <Col>
+                        <p>Expiration data (MM/YY)</p>
+                        <input name="expDate" type="text" required maxLength="5"/>
+                    </Col>
+                    </Row>
+                </Container>
+            </div>
+            <div>
                 <p>Name on card</p>
                 <input name="nameOnCard" type="text" />
             </div>
