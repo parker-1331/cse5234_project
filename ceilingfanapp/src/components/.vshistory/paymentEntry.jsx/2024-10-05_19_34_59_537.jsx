@@ -10,7 +10,6 @@ const PaymentEntry = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        e.preventDefault();
         navigate("/purchase/shippingEntry", { payment: payment, setPayment: setPayment });
     }
 
@@ -24,7 +23,6 @@ const PaymentEntry = () => {
                 name="cardNum"
                 type="text"
                 required
-                minLength="16"
                 maxLength="16"
                 onChange={(e) =>                
                     setPayment({ ...payment, cardNum: e.target.value })
@@ -32,42 +30,15 @@ const PaymentEntry = () => {
             />
             <br></br><br></br>
             <p>Expiration date (MM/YY)</p>
-            <input
-                name="expDate"
-                type="text"
-                required
-                minLength="5"
-                maxLength="5"
-                size="10"
-                onChange={(e) =>                
-                    setPayment({ ...payment, expDate: e.target.value })
-                }
-            />
+            <input name="expDate" type="text" required maxLength="5" size="8" />
             <br></br><br></br>
             <p>CCV</p>
-            <input
-                name="ccv"
-                type="text"
-                required
-                minLength="3"
-                maxLength="3"
-                size="10"
-                onChange={(e) =>                
-                    setPayment({ ...payment, ccv: e.target.value })
-                }
-            />
+            <input name="ccv" type="text" required maxLength="3" size="8" />
             <br></br><br></br>
             <p>Name on card</p>
-            <input
-                name="cardName"
-                type="text"
-                required
-                onChange={(e) =>                
-                    setPayment({ ...payment, cardName: e.target.value })
-                }
-            />
+            <input name="nameOnCard" type="text" />
             <br></br><br></br>
-                <button type="submit">To Shipping</button>
+                <button onClick={handleSubmit}>To Shipping</button>
             </form>
        </div>
     );

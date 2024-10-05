@@ -10,7 +10,6 @@ const PaymentEntry = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        e.preventDefault();
         navigate("/purchase/shippingEntry", { payment: payment, setPayment: setPayment });
     }
 
@@ -22,7 +21,7 @@ const PaymentEntry = () => {
             <p>Credit card number</p>
             <input
                 name="cardNum"
-                type="text"
+                type="number"
                 required
                 minLength="16"
                 maxLength="16"
@@ -38,7 +37,6 @@ const PaymentEntry = () => {
                 required
                 minLength="5"
                 maxLength="5"
-                size="10"
                 onChange={(e) =>                
                     setPayment({ ...payment, expDate: e.target.value })
                 }
@@ -47,11 +45,10 @@ const PaymentEntry = () => {
             <p>CCV</p>
             <input
                 name="ccv"
-                type="text"
+                type="number"
                 required
                 minLength="3"
                 maxLength="3"
-                size="10"
                 onChange={(e) =>                
                     setPayment({ ...payment, ccv: e.target.value })
                 }
@@ -67,7 +64,7 @@ const PaymentEntry = () => {
                 }
             />
             <br></br><br></br>
-                <button type="submit">To Shipping</button>
+                <button onClick={handleSubmit}>To Shipping</button>
             </form>
        </div>
     );

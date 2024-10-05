@@ -10,8 +10,12 @@ const PaymentEntry = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        e.preventDefault();
         navigate("/purchase/shippingEntry", { payment: payment, setPayment: setPayment });
+
+        console.log("Card Number:", payment.cardNum);
+        console.log("Expiration Date:", payment.expDate);
+        console.log("CCV:", payment.ccv);
+        console.log("Name on Card:", payment.cardName);
     }
 
     return (
@@ -67,7 +71,7 @@ const PaymentEntry = () => {
                 }
             />
             <br></br><br></br>
-                <button type="submit">To Shipping</button>
+                <button type="submit" onClick={handleSubmit}>To Shipping</button>
             </form>
        </div>
     );

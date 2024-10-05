@@ -10,7 +10,6 @@ const PaymentEntry = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        e.preventDefault();
         navigate("/purchase/shippingEntry", { payment: payment, setPayment: setPayment });
     }
 
@@ -67,7 +66,7 @@ const PaymentEntry = () => {
                 }
             />
             <br></br><br></br>
-                <button type="submit">To Shipping</button>
+                <button onClick={handleSubmit}>To Shipping</button>
             </form>
        </div>
     );
