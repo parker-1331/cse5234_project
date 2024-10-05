@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-do
 import ViewOrder from './components/viewOrder';
 import ViewConfirmation from './components/confirmation';
 import PaymentEntry from './components/paymentEntry';
-import ShippingEntry from './components/shippingEntry';
+import ShippingEntry from './components/paymentEntry';
 import Container from 'react-bootstrap/Container';
 
 
