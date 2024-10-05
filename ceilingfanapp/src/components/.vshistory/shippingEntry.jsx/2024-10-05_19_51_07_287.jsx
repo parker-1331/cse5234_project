@@ -5,11 +5,6 @@ import { Container, Row, Col, Button, Stack, Table } from 'react-bootstrap';
 
 const ShippingEntry = () => {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        navigate("/purchase/viewOrder", { payment: payment, setPayment: setPayment });
-    }
-
     return (
         <div>
             <form onSubmit={handleSubmit}>
