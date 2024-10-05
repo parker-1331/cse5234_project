@@ -11,7 +11,7 @@ const ShippingEntry = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate("/purchase/viewOrder", { shipping: shipping, setShipping: setShipping });
+        navigate("/purchase/viewOrder", { shipping: shipping, setShipping: setShipping };
     }
 
     return (

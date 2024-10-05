@@ -67,7 +67,7 @@ const PaymentEntry = () => {
                     }
                 />
                 <br></br><br></br>
-                <button type="submit">To Shipping</button>
+                    <button type="submit">To Shipping</button>
             </form>
        </div>
     );

@@ -5,13 +5,9 @@ import { Container, Row, Col, Button, Stack, Table } from 'react-bootstrap';
 
 const ShippingEntry = () => {
 
-    const location = useLocation();
-    const navigate = useNavigate();
-    const [shipping, setShipping] = useState({ userName: '', addr1: '', addr2: '', city: '', state: '', zip: '', });
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate("/purchase/viewOrder", { shipping: shipping, setShipping: setShipping });
+        navigate("/purchase/viewOrder", { payment: payment, setPayment: setPayment });
     }
 
     return (
