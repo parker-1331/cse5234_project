@@ -23,10 +23,7 @@ const ShippingEntry = () => {
                 <input
                     name="nameOfCust"
                     type="text"
-                    required  
-                    onChange={(e) =>
-                        setShipping({ ...shipping, userName: e.target.value })
-                    }
+                    required                   
                 />
                 <br></br><br></br>
                 <p>Address Line 1</p>
@@ -34,18 +31,12 @@ const ShippingEntry = () => {
                     name="addr1"
                     type="text"
                     required
-                    onChange={(e) =>
-                        setShipping({ ...shipping, addr1: e.target.value })
-                    }
                 />
                 <br></br><br></br>
                 <p>Address Line 2 (optional)</p>
                 <input
                     name="addr2"
                     type="text"
-                    onChange={(e) =>
-                        setShipping({ ...shipping, addr2: e.target.value })
-                    }
                 />
                 <br></br><br></br>
                 <p>City</p>
@@ -53,9 +44,6 @@ const ShippingEntry = () => {
                     name="city"
                     type="text"
                     required
-                    onChange={(e) =>
-                        setShipping({ ...shipping, city: e.target.value })
-                    }
                 />
                 <br></br><br></br>
                 <p>State</p>
@@ -65,9 +53,6 @@ const ShippingEntry = () => {
                     required
                     minLength="2"
                     maxLength="2"
-                    onChange={(e) =>
-                        setShipping({ ...shipping, state: e.target.value })
-                    }
                 />
                 <br></br><br></br>
                 <p>Zip</p>
@@ -77,9 +62,6 @@ const ShippingEntry = () => {
                     required
                     minLength="5"
                     maxLength="5"
-                    onChange={(e) =>
-                        setShipping({ ...shipping, zip: e.target.value })
-                    }
                 />
                 <br></br><br></br>
                 <button type="submit">To Confirmation</button>

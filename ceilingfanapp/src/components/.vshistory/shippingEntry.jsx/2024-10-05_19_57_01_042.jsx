@@ -25,7 +25,7 @@ const ShippingEntry = () => {
                     type="text"
                     required  
                     onChange={(e) =>
-                        setShipping({ ...shipping, userName: e.target.value })
+                        setShipping({ ...payment, userName: e.target.value })
                     }
                 />
                 <br></br><br></br>
@@ -35,7 +35,7 @@ const ShippingEntry = () => {
                     type="text"
                     required
                     onChange={(e) =>
-                        setShipping({ ...shipping, addr1: e.target.value })
+                        setShipping({ ...payment, addr1: e.target.value })
                     }
                 />
                 <br></br><br></br>
@@ -44,7 +44,7 @@ const ShippingEntry = () => {
                     name="addr2"
                     type="text"
                     onChange={(e) =>
-                        setShipping({ ...shipping, addr2: e.target.value })
+                        setShipping({ ...payment, addr2: e.target.value })
                     }
                 />
                 <br></br><br></br>
@@ -54,7 +54,7 @@ const ShippingEntry = () => {
                     type="text"
                     required
                     onChange={(e) =>
-                        setShipping({ ...shipping, city: e.target.value })
+                        setShipping({ ...payment, city: e.target.value })
                     }
                 />
                 <br></br><br></br>
@@ -66,7 +66,7 @@ const ShippingEntry = () => {
                     minLength="2"
                     maxLength="2"
                     onChange={(e) =>
-                        setShipping({ ...shipping, state: e.target.value })
+                        setShipping({ ...payment, state: e.target.value })
                     }
                 />
                 <br></br><br></br>
@@ -78,7 +78,7 @@ const ShippingEntry = () => {
                     minLength="5"
                     maxLength="5"
                     onChange={(e) =>
-                        setShipping({ ...shipping, zip: e.target.value })
+                        setShipping({ ...payment, zip: e.target.value })
                     }
                 />
                 <br></br><br></br>
