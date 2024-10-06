@@ -1,6 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import { useLocation, useNavigate } from 'react-router-dom';
+import { Container, Row, Col, Button, Stack, Table } from 'react-bootstrap';
 
 const ShippingEntry = () => {
 
@@ -11,13 +12,6 @@ const ShippingEntry = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         navigate("/purchase/viewOrder", { shipping: shipping, setShipping: setShipping });
-
-        console.log("Name of Customer: ", shipping.userName);
-        console.log("Address Line 1: ", shipping.addr1);
-        console.log("Address Line 2: ", shipping.addr2);
-        console.log("City: ", shipping.city);
-        console.log("State: ", shipping.state);
-        console.log("Zip: ", shipping.zip);
     }
 
     return (
