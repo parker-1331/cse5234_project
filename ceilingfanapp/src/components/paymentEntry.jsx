@@ -26,11 +26,13 @@ const PaymentEntry = () => {
             <Form.Group controlId="cardNum">
               <Form.Label>Credit Card Number</Form.Label>
               <Form.Control 
-                type="number" 
+                type="text" 
                 required
                 onChange={(e) =>                
                   setPayment({ ...payment, cardNum: e.target.value })
                 }
+                minLength="16"
+                maxLength="16"
               />
               <Form.Control.Feedback>Please enter a credit card number.</Form.Control.Feedback>
             </Form.Group>

@@ -1,6 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import { useLocation, useNavigate } from 'react-router-dom';
+import {Container, Form, Button} from 'react-bootstrap';
 
 const ShippingEntry = () => {
 
@@ -21,7 +22,85 @@ const ShippingEntry = () => {
     }
 
     return (
-        <div>
+        <Container>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="nameOfCust">
+              <Form.Label>Name</Form.Label>
+              <Form.Control 
+                type="text"
+                required
+                onChange={(e) =>
+                  setShipping({ ...shipping, userName: e.target.value })
+                }
+              />
+            </Form.Group>
+                
+            <Form.Group controlId="addr1">
+              <Form.Label>Address Line 1</Form.Label>
+              <Form.Control 
+                type="text"
+                required
+                onChange={(e) =>
+                  setShipping({ ...shipping, addr1: e.target.value })
+                }
+              />
+            </Form.Group>
+
+            <Form.Group controlId="addr2">
+              <Form.Label>Address Line 2</Form.Label>
+              <Form.Control 
+                type="text"
+                onChange={(e) =>
+                  setShipping({ ...shipping, addr2: e.target.value })
+                }
+              />
+            </Form.Group>
+
+            <Form.Group controlId="city">
+              <Form.Label>City</Form.Label>
+              <Form.Control 
+                type="text"
+                required
+                onChange={(e) =>
+                  setShipping({ ...shipping, city: e.target.value })
+                }
+              />
+            </Form.Group>
+
+            <Form.Group controlId="state">
+              <Form.Label>State</Form.Label>
+              <Form.Control 
+                type="text"
+                required
+                minLength="2"
+                maxLength="2"
+                onChange={(e) =>
+                  setShipping({ ...shipping, state: e.target.value })
+                }
+              />
+            </Form.Group>
+
+            <Form.Group controlId="zip">
+              <Form.Label>ZIP Code</Form.Label>
+              <Form.Control 
+                type="text"
+                required
+                minLength="5"
+                maxLength="5"
+                onChange={(e) =>
+                  setShipping({ ...shipping, zip: e.target.value })
+                }
+              />
+              <Form.Control.Feedback>ZIP Code must be 5 digits.</Form.Control.Feedback>
+            </Form.Group>
+
+            <Button variant="primary" type="submit">To Confirmation</Button>
+
+          </Form>
+        </Container>
+    );
+
+    /* <div>
             <form onSubmit={handleSubmit}>
                 <h1>Shipping</h1>
                 <br></br>
@@ -90,7 +169,6 @@ const ShippingEntry = () => {
                 <br></br><br></br>
                 <button type="submit">To Confirmation</button>
             </form>
-        </div>
-    );
+        </div> */
 }
 export default ShippingEntry;
