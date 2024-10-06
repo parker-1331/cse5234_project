@@ -24,13 +24,13 @@ function SubmitOrder() {
   
   return (
     <Row>
-      <Col>
-      <Button variant="secondary" style={{width: "95%"}} onClick={handleCancel}>
+      <Col className="d-flex justify-content-end">
+      <Button variant="secondary" style={{width: "50%"}} onClick={handleCancel}>
         Go Back
       </Button>
       </Col>
-      <Col>
-      <Button variant="primary" style={{width: "95%"}} onClick={handleSubmit}>
+      <Col className="d-flex justify-content-start">
+      <Button variant="primary" style={{width: "50%"}} onClick={handleSubmit}>
         Confirm Order
       </Button>
       </Col>
@@ -44,21 +44,22 @@ const ViewOrder = () => {
 
   const location = useLocation();
   
+  console.log(location);
+
    return (
     <Container fluid>
-      <Row>
-        <Col>
-          <h2>Does everything look right?</h2>
-        </Col>
-      </Row>
       <Row>
         <Col>
           <h4>Order Summary:</h4>
         </Col>
       </Row>
-    {DisplayOrderSummary(fake_order)}  
-    
-    {SubmitOrder()}
+      {DisplayOrderSummary(fake_order)}  
+      <Row>
+        <Col className="text-center">
+          <h2>Does everything look right?</h2>
+        </Col>
+      </Row>
+      {SubmitOrder()}
     </Container>
   );
 }
