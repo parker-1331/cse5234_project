@@ -19,14 +19,14 @@ function SubmitOrder() {
   }
 
   function handleCancel() { // Return to previous page.
-    navigate(-1)
+    navigate("/purchase")
   }
   
   return (
     <Row>
       <Col className="d-flex justify-content-end">
       <Button variant="secondary" style={{width: "50%"}} onClick={handleCancel}>
-        Go Back
+        Cancel
       </Button>
       </Col>
       <Col className="d-flex justify-content-start">
