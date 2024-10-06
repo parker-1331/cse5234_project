@@ -1,11 +1,12 @@
 import React from "react"
 import { useState } from "react"
 import { useLocation, useNavigate } from 'react-router-dom';
+import {Container, Form, Button} from 'react-bootstrap';
 
 const PaymentEntry = () => {
 
     const location = useLocation();
-    const [payment, setPayment] = useState({ cardNum: '', expDate: '', ccv: '', cardName: '', });
+    const [payment, setPayment] = useState({ cardNum: '', expDate: '', cvv: '', cardName: '', });
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -14,66 +15,66 @@ const PaymentEntry = () => {
 
         console.log("Card Number: ", payment.cardNum);
         console.log("Expiration Date: ", payment.expDate);
-        console.log("CCV: ", payment.ccv);
+        console.log("CVV: ", payment.cvv);
         console.log("Name on Card: ", payment.cardName);
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <h1>Payment</h1>
-                <br></br>
-                <p>Credit card number</p>
-                <input
-                    name="cardNum"
-                    type="text"
-                    required
-                    minLength="16"
-                    maxLength="16"
-                    onChange={(e) =>                
-                        setPayment({ ...payment, cardNum: e.target.value })
-                    }
-                />
-                <br></br><br></br>
-                <p>Expiration date (MM/YY)</p>
-                <input
-                    name="expDate"
-                    type="text"
-                    required
-                    minLength="5"
-                    maxLength="5"
-                    size="10"
-                    onChange={(e) =>                
-                        setPayment({ ...payment, expDate: e.target.value })
-                    }
-                />
-                <br></br><br></br>
-                <p>CCV</p>
-                <input
-                    name="ccv"
-                    type="text"
-                    required
-                    minLength="3"
-                    maxLength="3"
-                    size="10"
-                    onChange={(e) =>                
-                        setPayment({ ...payment, ccv: e.target.value })
-                    }
-                />
-                <br></br><br></br>
-                <p>Name on card</p>
-                <input
-                    name="cardName"
-                    type="text"
-                    required
-                    onChange={(e) =>                
-                        setPayment({ ...payment, cardName: e.target.value })
-                    }
-                />
-                <br></br><br></br>
-                <button type="submit">To Shipping</button>
-            </form>
-       </div>
+        <Container>
+          <h1>Payment</h1>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="cardNum">
+              <Form.Label>Credit Card Number</Form.Label>
+              <Form.Control 
+                type="number" 
+                required
+                onChange={(e) =>                
+                  setPayment({ ...payment, cardNum: e.target.value })
+                }
+              />
+              <Form.Control.Feedback>Please enter a credit card number.</Form.Control.Feedback>
+            </Form.Group>
+            
+            <Form.Group controlId="expDate">
+              <Form.Label>Expiration Date</Form.Label>
+              <Form.Control 
+                type="text"
+                required
+                minLength="5"
+                maxLength="5"
+                onChange={(e) =>                
+                  setPayment({ ...payment, expDate: e.target.value })
+                }
+              />
+            </Form.Group>
+
+            <Form.Group controlId="cvv">
+              <Form.Label>CVV</Form.Label>
+              <Form.Control 
+                type="number"
+                required
+                minLength="3"
+                maxLength="4"
+                onChange={(e) =>                
+                  setPayment({ ...payment, cvv: e.target.value })
+                }
+              />
+            </Form.Group>
+
+            <Form.Group controlId="cardName">
+              <Form.Label>Name on Card</Form.Label>
+              <Form.Control 
+                type="text"
+                required
+                onChange={(e) =>                
+                  setPayment({ ...payment, cardName: e.target.value })
+                }
+              />
+            </Form.Group>
+
+            <Button variant="primary" type="submit">Submit</Button>
+          </Form> 
+       </Container>
     );
 }
 export default PaymentEntry;
