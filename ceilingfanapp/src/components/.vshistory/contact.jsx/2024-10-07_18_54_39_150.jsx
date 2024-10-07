@@ -54,7 +54,7 @@ const Contact = () => {
             <b>Warranty Support</b>
             <p>
                 If your product has a warranty, you can request assistance through our
-                Customer Service Team by emailing cfa_cs@ceilingfanapp.com.
+                Warranty Support Team by emailing warranty@yourcompany.com.
                 <br></br>
                 Please include your order number, the nature of the defect, and any relevant photos.
             </p>
