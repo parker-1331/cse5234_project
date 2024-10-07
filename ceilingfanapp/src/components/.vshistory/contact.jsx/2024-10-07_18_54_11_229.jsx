@@ -91,7 +91,6 @@ const Contact = () => {
             <p>
                 We accept major credit cards (Visa, Mastercard, American Express), PayPal, and Apple Pay.
             </p>
-            <br></br>
         </Container>
     );
 }

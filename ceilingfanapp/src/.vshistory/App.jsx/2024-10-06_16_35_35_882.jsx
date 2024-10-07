@@ -6,7 +6,6 @@ import ViewOrder from './components/viewOrder';
 import ViewConfirmation from './components/confirmation';
 import PaymentEntry from './components/paymentEntry';
 import ShippingEntry from './components/shippingEntry';
-import Contact from './components/contact';
 import {Container, Nav, Navbar, Stack} from 'react-bootstrap';
 
 
@@ -39,7 +38,6 @@ function App() {
             <Route path="/purchase/viewConfirmation" element={<ViewConfirmation/>} />
             <Route path="/purchase/paymentEntry" element={<PaymentEntry />} />
             <Route path="/purchase/shippingEntry" element={<ShippingEntry />} />
-            <Route path="/purchase/contact" element={<Contact />} />
           </Routes>
         </Container>
       </Router>
