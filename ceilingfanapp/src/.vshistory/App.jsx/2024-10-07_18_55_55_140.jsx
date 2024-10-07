@@ -34,9 +34,6 @@ function App() {
           <Nav>
             <Nav.Link href="/about"><b>About Us</b></Nav.Link>
           </Nav>
-          <Nav>
-            <Nav.Link href="/contact"><b>Contact</b></Nav.Link>
-          </Nav>
         </Container>
       </Navbar>
       <Router>
@@ -47,7 +44,7 @@ function App() {
             <Route path="/purchase/paymentEntry" element={<PaymentEntry />} />
             <Route path="/purchase/shippingEntry" element={<ShippingEntry />} />
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/purchase/contact" element={<Contact />} />
           </Routes>
         </Container>
       </Router>

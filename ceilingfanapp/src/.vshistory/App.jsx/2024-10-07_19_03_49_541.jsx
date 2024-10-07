@@ -34,9 +34,6 @@ function App() {
           <Nav>
             <Nav.Link href="/about"><b>About Us</b></Nav.Link>
           </Nav>
-          <Nav>
-            <Nav.Link href="/contact"><b>Contact</b></Nav.Link>
-          </Nav>
         </Container>
       </Navbar>
       <Router>
