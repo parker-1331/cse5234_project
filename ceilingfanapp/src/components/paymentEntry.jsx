@@ -53,7 +53,7 @@ const PaymentEntry = () => {
             <Form.Group controlId="cvv">
               <Form.Label>CVV</Form.Label>
               <Form.Control 
-                type="number"
+                type="text"
                 required
                 minLength="3"
                 maxLength="4"
