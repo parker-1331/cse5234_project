@@ -28,7 +28,7 @@ const AboutUs = () => {
              Our vision is to lead the ceiling fan market by becoming the go-to name for legendary comfort,
              design, and energy efficiency. We aspire to set new standards in home climate solutions, blending
              technology and aesthetics seamlessly, while continuously inspiring our customers to create spaces
-             they love. With every spin, we aim to leave a lasting impact-one fan at a time.
+             they love. With every spin, we aim to leave a lasting impact—one fan at a time.
            </p>
         </Col>
       </Row>
