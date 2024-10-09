@@ -2,8 +2,7 @@ $green: #116530;
 $blue-green: #21B6A8;
 $neon-green: #A3EBB1;
 $kelly-green: #18A558;
-
-
+$gray: #495057;
 
 $primary: $kelly-green;
 $secondary: $neon-green;
@@ -18,5 +17,17 @@ $secondary: $neon-green;
   color: $neon-green;
 }
 
+.btn-primary {
+  color: #FFFFFF !important;
+  font-weight: bold !important;
+}
+.btn-secondary {
+  color: $gray !important;
+  font-weight: bold !important;
+}
+
+.table-striped tr:nth-child(even) {
+  background-color: $neon-green !important;
+}
 
 @import "node_modules/bootstrap/scss/bootstrap";

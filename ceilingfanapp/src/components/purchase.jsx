@@ -55,8 +55,8 @@ const Purchase = () => {
                     ))}
                 </Form.Group>
 
-                 <Row>                   
-                    <Button variant="primary" type="submit">Submit Order</Button>
+                 <Row className="justify-content-center">                   
+                    <Button variant="primary" type="submit" style={{width: "25%"}}>Submit Order</Button>
                 </Row>
             </Form>
         </Container>

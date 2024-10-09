@@ -26,7 +26,7 @@ export function DisplayOrderSummary(order) {
   return (
     <Container>
       <Row><Col>
-    <Table striped className="">
+    <Table striped>
       <thead>
         <tr>
           <th>Item</th>
