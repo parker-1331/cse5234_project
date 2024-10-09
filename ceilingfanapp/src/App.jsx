@@ -1,5 +1,6 @@
-//import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
+
+//import "bootstrap/dist/css/bootstrap.min.css";
+import "./scss/custom.scss";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
 import ViewOrder from './components/viewOrder';
