@@ -16,21 +16,14 @@ const AboutUs = () => {
       <Row>
         <Col>
           <p>
-            At Ceiling Fan App we are on a mission to revolutionize comfort and elevate spaces with 
+            At [Your Company Name], we are on a mission to revolutionize comfort and elevate spaces with 
             cutting-edge ceiling fans that are both stylish and energy-efficient. As absolute legends in
             the industry, we deliver unparalleled quality, top-notch customer service, and innovation that
             keeps you cool-literally and figuratively. We aim to create an effortless, breezy experience
             from the moment you shop to long after installation.
           </p>
         </Col>
-        <Col>
-           <p>
-             Our vision is to lead the ceiling fan market by becoming the go-to name for legendary comfort,
-             design, and energy efficiency. We aspire to set new standards in home climate solutions, blending
-             technology and aesthetics seamlessly, while continuously inspiring our customers to create spaces
-             they love. With every spin, we aim to leave a lasting impact-one fan at a time.
-           </p>
-        </Col>
+        <Col><p>A world of cool people enjoying cool air.</p></Col>
       </Row>
       <Row>
         <Col>

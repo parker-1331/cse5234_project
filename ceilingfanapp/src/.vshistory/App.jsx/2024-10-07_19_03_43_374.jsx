@@ -1,6 +1,5 @@
-
-//import "bootstrap/dist/css/bootstrap.min.css";
-import "./scss/custom.scss";
+//import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
 import ViewOrder from './components/viewOrder';
@@ -34,9 +33,6 @@ function App() {
           </Nav>
           <Nav>
             <Nav.Link href="/about"><b>About Us</b></Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link href="/contact"><b>Contact</b></Nav.Link>
           </Nav>
         </Container>
       </Navbar>

@@ -1,14 +1,11 @@
-
-//import "bootstrap/dist/css/bootstrap.min.css";
-import "./scss/custom.scss";
+//import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
 import ViewOrder from './components/viewOrder';
 import ViewConfirmation from './components/confirmation';
 import PaymentEntry from './components/paymentEntry';
 import ShippingEntry from './components/shippingEntry';
-import Contact from './components/contact';
-import AboutUs from './components/about';
 import {Container, Nav, Navbar, Stack} from 'react-bootstrap';
 
 
@@ -32,12 +29,6 @@ function App() {
           <Nav>
             <Nav.Link href="/purchase"><b>Shop</b></Nav.Link>
           </Nav>
-          <Nav>
-            <Nav.Link href="/about"><b>About Us</b></Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link href="/contact"><b>Contact</b></Nav.Link>
-          </Nav>
         </Container>
       </Navbar>
       <Router>
@@ -47,8 +38,6 @@ function App() {
             <Route path="/purchase/viewConfirmation" element={<ViewConfirmation/>} />
             <Route path="/purchase/paymentEntry" element={<PaymentEntry />} />
             <Route path="/purchase/shippingEntry" element={<ShippingEntry />} />
-            <Route path="/about" element={<AboutUs />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Container>
       </Router>
