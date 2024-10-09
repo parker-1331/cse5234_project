@@ -9,24 +9,23 @@ import PaymentEntry from './components/paymentEntry';
 import ShippingEntry from './components/shippingEntry';
 import Contact from './components/contact';
 import AboutUs from './components/about';
-import {Container, Nav, Navbar, Stack} from 'react-bootstrap';
-
+import {Container, Nav, Navbar, Stack, Row, Col} from 'react-bootstrap';
 
 function App() {
   return (
     <Container className="App" fluid={true}>
-      <Navbar className="bg-body-secondary">
+      <Navbar id="TopNavbar" className="bg-body-secondary">
         <Container>
           <Navbar.Brand>
             <Stack direction="horizontal" gap={2}>
-            <img
-              alt=""
-              src="/src/assets/fan-logo.svg"
-              width="40"
-              height="40"
-              className="d-inline-block align-top"
-            />
-            <h3>{' '}Ceiling Fan App</h3>
+              <img
+                alt=""
+                src="/src/assets/fan-logo.svg"
+                width="40"
+                height="40"
+                className="d-inline-block align-top"
+              />
+              <h3>{' '}Ceiling Fan App</h3>
             </Stack>
           </Navbar.Brand>
           <Nav>
@@ -43,6 +42,7 @@ function App() {
       <Router>
         <Container className="content" fluid={true}>
           <Routes>
+            <Route path ="/" element={<Navigate to="/purchase" />} />
             <Route path="/purchase" element={<Purchase/>} />
             <Route path="/purchase/viewOrder" element={<ViewOrder/>} />
             <Route path="/purchase/viewConfirmation" element={<ViewConfirmation/>} />
@@ -53,6 +53,26 @@ function App() {
           </Routes>
         </Container>
       </Router>
+      <footer id="CeilingFanFooter">
+        <Container id="FooterInformation">
+          <Row>
+          {'\u00A9'} All Rights Reserved 2024
+          </Row>
+        </Container>
+        <Container id="FooterLinks">
+          <Row>
+            <Col>
+              <Nav.Link href="/purchase">Store</Nav.Link>
+            </Col>
+            <Col>
+              <Nav.Link href="/about">About Us</Nav.Link>
+            </Col>
+            <Col>
+              <Nav.Link href="/contact">Contact Us</Nav.Link>
+            </Col>
+          </Row>
+        </Container>
+      </footer>
     </Container>
   );
 }
