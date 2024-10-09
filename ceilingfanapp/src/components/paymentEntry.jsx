@@ -11,7 +11,7 @@ const PaymentEntry = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate("/purchase/shippingEntry", { payment: payment, setPayment: setPayment });
+        navigate("/purchase/shippingEntry", { state: { payment: payment, order: location.state.order }});
 
         console.log("Card Number: ", payment.cardNum);
         console.log("Expiration Date: ", payment.expDate);

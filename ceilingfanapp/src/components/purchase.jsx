@@ -8,13 +8,9 @@ const Purchase = () => {
         quantity: [0, 0, 0, 0, 0], price: [15, 25, 32, 67, 999999997.98], name: ['Fan', 'Big Fan', 'Deluxe Fan', 'Deluxe Big Fan', 'Extremely Large, Extremely High Quality Fan']
     });
 
-    const [cardInfo, setCardInfo] = useState({cardNum: '', expirationDate: '', cvv: '',
-        cardHolder: '', addressLine1: '', addressLine2: '', city: '', state: '', zip: ''
-    });
-
     const navigate = useNavigate();
     const submit = (e) => {
-        navigate("/purchase/paymentEntry", { order: order, setOrder: setOrder, cardInfo: cardInfo, setCardInfo: setCardInfo });
+        navigate("/purchase/paymentEntry", { state: { order: order }});
         
         console.log("Quantity: " + order.quantity);
     }

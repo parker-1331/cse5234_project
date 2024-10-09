@@ -9,8 +9,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export function DisplayOrderSummary(order) {
   
-  let productName = order.name;
-  let quantity = order.buyQuantity;
+  let name = order.name;
+  let quantity = order.quantity;
   let price = order.price;
 
   function GetItemCost(qty, index, array) {
@@ -39,7 +39,7 @@ export function DisplayOrderSummary(order) {
         {quantity.map(function(qty, index) {
           return (
             <tr key={index}>
-              <td>{productName[index]}</td>
+              <td>{name[index]}</td>
               <td>{qty}</td>
               <td>{price[index]}</td>
             </tr>

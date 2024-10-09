@@ -6,16 +6,17 @@ import { DisplayOrderSummary } from "./confirmation";
 
 function SubmitOrder() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const order = location.state.order;
   
   function handleSubmit() {
     let confirmationNum = 12345; // Placeholder, eventually need real value here!
-    let fake_order = {buyQuantity: [1,2,3,4,5], price: [10,20,30,40,50], name: ["Fan1", "Fan2", "Fan3", "Fan4", "Fan5"]}
 
     navigate(
       "/purchase/viewConfirmation", 
       {state: 
         {confirmationNumber: confirmationNum, 
-          order: fake_order}});
+          order: order, payment: location.state.payment, shipping: location.state.shipping}});
   }
 
   function handleCancel() { // Return to previous page.
@@ -40,10 +41,9 @@ function SubmitOrder() {
 
 const ViewOrder = () => {
 
-  let fake_order = {buyQuantity: [1,2,3,4,5], price: [10,20,30,40,50], name: ["Fan1", "Fan2", "Fan3", "Fan4", "Fan5"]}
-
   const location = useLocation();
-  
+  const order = location.state.order;
+
   console.log(location);
 
    return (
@@ -53,7 +53,7 @@ const ViewOrder = () => {
           <h4>Order Summary:</h4>
         </Col>
       </Row>
-      {DisplayOrderSummary(fake_order)}  
+      {DisplayOrderSummary(order)}  
       <Row>
         <Col className="text-center">
           <h2>Does everything look right?</h2>
