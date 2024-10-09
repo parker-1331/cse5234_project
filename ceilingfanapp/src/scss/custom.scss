@@ -1,6 +1,22 @@
+$green: #116530;
+$blue-green: #21B6A8;
+$neon-green: #A3EBB1;
+$kelly-green: #18A558;
 
 
-$primary: #100;
+
+$primary: $kelly-green;
+$secondary: $neon-green;
+
+.navbar {
+  background-color: $green;
+}
+.brand-text {
+  color: $neon-green;
+}
+.navbar-nav .nav-link {
+  color: $neon-green;
+}
 
 
 @import "node_modules/bootstrap/scss/bootstrap";

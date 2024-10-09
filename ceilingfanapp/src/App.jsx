@@ -1,4 +1,3 @@
-//import "bootstrap/dist/css/bootstrap.min.css";
 import "./scss/custom.scss";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
@@ -14,18 +13,18 @@ import {Container, Nav, Navbar, Stack, Row, Col} from 'react-bootstrap';
 function App() {
   return (
     <Container className="App" fluid={true}>
-      <Navbar id="TopNavbar" className="bg-body-secondary">
+      <Navbar id="TopNavbar">
         <Container>
           <Navbar.Brand>
             <Stack direction="horizontal" gap={2}>
-              <img
-                alt=""
-                src="/src/assets/fan-logo.svg"
-                width="40"
-                height="40"
-                className="d-inline-block align-top"
-              />
-              <h3>{' '}Ceiling Fan App</h3>
+            <img
+              alt=""
+              src="/src/assets/fan-logo-neon.svg"
+              width="40"
+              height="40"
+              className="d-inline-block align-top"
+            />
+            <h3 className="brand-text">{' '}Ceiling Fan App</h3>
             </Stack>
           </Navbar.Brand>
           <Nav>
