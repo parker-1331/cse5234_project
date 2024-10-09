@@ -1,8 +1,7 @@
-//import "bootstrap/dist/css/bootstrap.min.css";
-import "./scss/custom.scss";
+//import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
-import Purchase from './components/purchase';
 import ViewOrder from './components/viewOrder';
 import ViewConfirmation from './components/confirmation';
 import PaymentEntry from './components/paymentEntry';
@@ -35,15 +34,11 @@ function App() {
           <Nav>
             <Nav.Link href="/about"><b>About Us</b></Nav.Link>
           </Nav>
-          <Nav>
-            <Nav.Link href="/contact"><b>Contact</b></Nav.Link>
-          </Nav>
         </Container>
       </Navbar>
       <Router>
         <Container className="content" fluid={true}>
           <Routes>
-            <Route path="/purchase" element={<Purchase/>} />
             <Route path="/purchase/viewOrder" element={<ViewOrder/>} />
             <Route path="/purchase/viewConfirmation" element={<ViewConfirmation/>} />
             <Route path="/purchase/paymentEntry" element={<PaymentEntry />} />

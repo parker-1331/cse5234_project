@@ -11,7 +11,7 @@ const PaymentEntry = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate("/purchase/shippingEntry", { state: { payment: payment, order: location.state.order }});
+        navigate("/purchase/shippingEntry", { payment: payment, setPayment: setPayment });
 
         console.log("Card Number: ", payment.cardNum);
         console.log("Expiration Date: ", payment.expDate);
@@ -53,7 +53,7 @@ const PaymentEntry = () => {
             <Form.Group controlId="cvv">
               <Form.Label>CVV</Form.Label>
               <Form.Control 
-                type="text"
+                type="number"
                 required
                 minLength="3"
                 maxLength="4"

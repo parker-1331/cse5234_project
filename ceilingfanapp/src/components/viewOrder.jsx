@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect } from "react";
 import {useLocation, useNavigate} from 'react-router-dom';
 import {Container, Row, Col, Button, Stack, Table} from 'react-bootstrap';
