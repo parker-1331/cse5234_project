@@ -35,7 +35,12 @@ export function DisplayOrderSummary(order) {
         </tr>
       </thead>
       <tbody>
-        {quantity.map(function(qty, index) {
+        {quantity.filter(function(qty) {
+          if (qty === 0) {
+            return false;
+          }
+          return true;
+        }).map(function(qty, index) {
           return (
             <tr key={index}>
               <td>{name[index]}</td>
