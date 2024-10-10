@@ -38,26 +38,24 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
-      <Router>
-        <Container className="content" fluid={true}>
-          <Routes>
-            <Route path ="/" element={<Navigate to="/purchase" />} />
-            <Route path="/purchase" element={<Purchase/>} />
-            <Route path="/purchase/viewOrder" element={<ViewOrder/>} />
-            <Route path="/purchase/viewConfirmation" element={<ViewConfirmation/>} />
-            <Route path="/purchase/paymentEntry" element={<PaymentEntry />} />
-            <Route path="/purchase/shippingEntry" element={<ShippingEntry />} />
-            <Route path="/about" element={<AboutUs />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </Container>
-      </Router>
+      <Stack gap={2}>
+        <Router>
+          <Container className="content" fluid={true}>
+            <Routes>
+              <Route path ="/" element={<Navigate to="/purchase" />} />
+              <Route path="/purchase" element={<Purchase/>} />
+              <Route path="/purchase/viewOrder" element={<ViewOrder/>} />
+              <Route path="/purchase/viewConfirmation" element={<ViewConfirmation/>} />
+              <Route path="/purchase/paymentEntry" element={<PaymentEntry />} />
+              <Route path="/purchase/shippingEntry" element={<ShippingEntry />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Container>
+        </Router>
+        <Container></Container>
+      </Stack>
       <footer id="CeilingFanFooter">
-        <Container id="FooterInformation">
-          <Row>
-          {'\u00A9'} All Rights Reserved 2024
-          </Row>
-        </Container>
         <Container id="FooterLinks">
           <Row>
             <Col>
@@ -69,6 +67,13 @@ function App() {
             <Col>
               <Nav.Link href="/contact">Contact Us</Nav.Link>
             </Col>
+          </Row>
+        </Container>
+        <Container id="FooterInformation">
+          <Row>
+          <Col>
+          {'\u00A9'} All Rights Reserved 2024
+          </Col>
           </Row>
         </Container>
       </footer>
