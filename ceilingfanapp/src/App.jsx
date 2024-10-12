@@ -12,7 +12,7 @@ import {Container, Nav, Navbar, Stack, Row, Col} from 'react-bootstrap';
 
 function App() {
   return (
-    <Container className="App" fluid={true}>
+    <Container id="PageContainer" className="App" fluid={true}>
       <Navbar id="TopNavbar">
         <Container>
           <Navbar.Brand>
