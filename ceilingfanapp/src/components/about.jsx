@@ -34,6 +34,15 @@ const AboutUs = () => {
       </Row>
       <Row>
         <Col>
+          <h2>Our Strategy</h2>
+          <p>
+            We aim to simplify the ceiling fan shopping experience for our customers 
+            by providing a sleek, simple interface and responsive service.
+          </p>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
           <h2>Meet Our Executives!</h2>
         </Col>
       </Row>
@@ -44,9 +53,24 @@ const AboutUs = () => {
           <h5>Chief Financial Officer</h5>
         </Col>
         <Col>
-          <p>(insert image here)</p>
+          <img 
+            className="bio-pic"
+            alt=""
+            src="/src/assets/cole_bio_pic.jpg" 
+            width="134"
+            height="150"
+            
+          />
           <h4>Cole Parker</h4>
           <h5>Chief Executive Officer</h5>
+          <p>
+            Cole is a second-year Master's student in Ohio State's 
+            Department of Computer Science and Engineering.  
+            He graduated with a Bachelor's of Science in Computer Science 
+            from the University of Alabama in 2022.  
+            He has interests in databases, distributed systems, and data analytics.<br/>  
+            In his free time, Cole enjoys cheering on the Buckeyes and playing volleyball.  O-H!
+          </p>
         </Col>
         <Col>
           <p>(insert image here)</p>

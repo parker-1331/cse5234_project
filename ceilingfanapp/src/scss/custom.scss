@@ -78,4 +78,8 @@ $body-bg: $gray-400;
 }
 
 
+.bio-pic {
+  border: 5px solid $green;
+}
+
 @import "node_modules/bootstrap/scss/bootstrap";
