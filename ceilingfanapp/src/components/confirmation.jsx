@@ -5,12 +5,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Alert from 'react-bootstrap/Alert';
-import "bootstrap/dist/css/bootstrap.min.css";
 
 export function DisplayOrderSummary(order) {
   
-  let productName = order.name;
-  let quantity = order.buyQuantity;
+  let name = order.name;
+  let quantity = order.quantity;
   let price = order.price;
 
   function GetItemCost(qty, index, array) {
@@ -27,8 +26,8 @@ export function DisplayOrderSummary(order) {
   return (
     <Container>
       <Row><Col>
-    <Table striped className="">
-      <thead>
+    <Table striped>
+      <thead className="TableHeader">
         <tr>
           <th>Item</th>
           <th>Quantity</th>
@@ -36,12 +35,17 @@ export function DisplayOrderSummary(order) {
         </tr>
       </thead>
       <tbody>
-        {quantity.map(function(qty, index) {
+        {quantity.filter(function(qty) {
+          if (qty === 0) {
+            return false;
+          }
+          return true;
+        }).map(function(qty, index) {
           return (
             <tr key={index}>
-              <td>{productName[index]}</td>
+              <td>{name[index]}</td>
               <td>{qty}</td>
-              <td>{price[index]}</td>
+              <td className="PriceText">{price[index]}</td>
             </tr>
           )
         })}
@@ -50,7 +54,7 @@ export function DisplayOrderSummary(order) {
     </Col></Row>
     <Row>
       <Col md={8}><h5>Total</h5></Col>
-      <Col md={4}><h5>${totalCost}</h5></Col>
+      <Col md={4}><h5 className="PriceText">${totalCost}</h5></Col>
     </Row>
     </Container>
     )
@@ -76,7 +80,7 @@ const ViewConfirmation = () => {
       </Row>
       <Row>
         <Col>
-          <h3>Order Summary:</h3>
+          <h3 className="PageTitle TableAllignedPageHeader">Order Summary:</h3>
         </Col>
       </Row>
           {DisplayOrderSummary(location.state.order)}

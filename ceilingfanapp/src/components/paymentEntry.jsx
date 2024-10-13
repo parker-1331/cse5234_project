@@ -11,7 +11,7 @@ const PaymentEntry = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate("/purchase/shippingEntry", { payment: payment, setPayment: setPayment });
+        navigate("/purchase/shippingEntry", { state: { payment: payment, order: location.state.order }});
 
         console.log("Card Number: ", payment.cardNum);
         console.log("Expiration Date: ", payment.expDate);
@@ -21,7 +21,7 @@ const PaymentEntry = () => {
 
     return (
         <Container>
-          <h1>Payment</h1>
+          <h1 className="PageTitle">Payment</h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="cardNum">
               <Form.Label>Credit Card Number</Form.Label>

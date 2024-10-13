@@ -6,12 +6,12 @@ import {Container, Form, Button} from 'react-bootstrap';
 const ShippingEntry = () => {
 
     const location = useLocation();
-    const navigate = useNavigate();
     const [shipping, setShipping] = useState({ userName: '', addr1: '', addr2: '', city: '', state: '', zip: '', });
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate("/purchase/viewOrder", { shipping: shipping, setShipping: setShipping });
+        navigate("/purchase/viewOrder", { state: { shipping: shipping, payment: location.state.payment, order: location.state.order}});
 
         console.log("Name of Customer: ", shipping.userName);
         console.log("Address Line 1: ", shipping.addr1);

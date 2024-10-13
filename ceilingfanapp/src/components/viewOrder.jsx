@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect } from "react";
 import {useLocation, useNavigate} from 'react-router-dom';
 import {Container, Row, Col, Button, Stack, Table} from 'react-bootstrap';
@@ -6,16 +5,17 @@ import { DisplayOrderSummary } from "./confirmation";
 
 function SubmitOrder() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const order = location.state.order;
   
   function handleSubmit() {
     let confirmationNum = 12345; // Placeholder, eventually need real value here!
-    let fake_order = {buyQuantity: [1,2,3,4,5], price: [10,20,30,40,50], name: ["Fan1", "Fan2", "Fan3", "Fan4", "Fan5"]}
 
     navigate(
       "/purchase/viewConfirmation", 
       {state: 
         {confirmationNumber: confirmationNum, 
-          order: fake_order}});
+          order: order, payment: location.state.payment, shipping: location.state.shipping}});
   }
 
   function handleCancel() { // Return to previous page.
@@ -40,20 +40,19 @@ function SubmitOrder() {
 
 const ViewOrder = () => {
 
-  let fake_order = {buyQuantity: [1,2,3,4,5], price: [10,20,30,40,50], name: ["Fan1", "Fan2", "Fan3", "Fan4", "Fan5"]}
-
   const location = useLocation();
-  
+  const order = location.state.order;
+
   console.log(location);
 
    return (
     <Container fluid>
       <Row>
         <Col>
-          <h4>Order Summary:</h4>
+          <h4 className="PageTitle TableAllignedPageHeader">Order Summary:</h4>
         </Col>
       </Row>
-      {DisplayOrderSummary(fake_order)}  
+      {DisplayOrderSummary(order)}  
       <Row>
         <Col className="text-center">
           <h2>Does everything look right?</h2>

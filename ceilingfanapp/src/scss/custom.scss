@@ -1,0 +1,101 @@
+$green: #116530;
+$blue-green: #21B6A8;
+$neon-green: #A3EBB1;
+$kelly-green: #18A558;
+
+$gray: #495057;
+$gray-400: #ced4da;
+
+$primary: $kelly-green;
+$secondary: $neon-green;
+
+
+$body-bg: $gray-400;
+
+* { 
+  margin: 0;
+  padding: 0;
+  font-family: "Fixedsys";
+}
+
+.navbar {
+  background-color: $green;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+}
+
+.brand-text {
+  color: $neon-green;
+}
+
+.navbar-nav .nav-link {
+  color: $neon-green;
+}
+
+
+.PageTitle {
+  text-decoration: underline overline;
+}
+
+.TableAllignedPageHeader {
+  text-align: center;
+}
+
+
+.btn-primary {
+  color: #FFFFFF !important;
+  font-weight: bold !important;
+}
+
+.btn-secondary {
+  color: $gray !important;
+  font-weight: bold !important;
+}
+
+
+.table-striped tr:nth-child(even) {
+  background-color: $neon-green !important;
+}
+
+.TableHeader {
+  font-weight: bold;
+}
+
+
+#PageContainer {
+  position: relative;
+  width: 100%;
+  margin:0;
+  padding:0;
+  min-Height: 100vh;
+}
+
+.content {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+#CeilingFanFooter {
+  background-color: $green;
+  color: $neon-green;
+  text-align: center;
+
+  height: 3em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  left: 0px;
+}
+
+
+.bio-pic {
+  border: 5px solid $green;
+}
+
+.PriceText {
+  font-family: "Baskerville";
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
