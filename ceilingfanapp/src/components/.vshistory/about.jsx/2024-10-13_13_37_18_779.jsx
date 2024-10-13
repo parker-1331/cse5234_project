@@ -77,19 +77,11 @@ const AboutUs = () => {
             className="bio-pic"
             alt=""
             src="/src/assets/ricky_bio_pic.jpg"
-            width="120"
+            width="110"
             height="150"
           />
           <h4>Ricky Wu</h4>
           <h5>Chief Technical Officer</h5>
-          <p>
-            Ricky is a fourth-year majoring in Computer Science and
-            Engineering at the Ohio State University. He has interests in
-            software engineering, with focuses in application development
-            and game design. Outside of programming, he is a speedcuber and
-            serves as an officer for the Ohio State Cube Club, and has 
-            organized and staff official speedcubing competitions in the past.
-          </p>
         </Col>
       </Row>
     </Container>

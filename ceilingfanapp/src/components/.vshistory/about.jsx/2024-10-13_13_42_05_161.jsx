@@ -86,9 +86,7 @@ const AboutUs = () => {
             Ricky is a fourth-year majoring in Computer Science and
             Engineering at the Ohio State University. He has interests in
             software engineering, with focuses in application development
-            and game design. Outside of programming, he is a speedcuber and
-            serves as an officer for the Ohio State Cube Club, and has 
-            organized and staff official speedcubing competitions in the past.
+            and game design.
           </p>
         </Col>
       </Row>
