@@ -7,7 +7,7 @@ const Contact = () => {
     return (
         <Container>
             <br></br>
-            <h1>Contact Us</h1>
+            <h1 className="PageTitle">Contact Us</h1>
             <br></br>
             <b>Need help? We're here for you!</b>
             <p>

@@ -49,7 +49,7 @@ const ViewOrder = () => {
     <Container fluid>
       <Row>
         <Col>
-          <h4>Order Summary:</h4>
+          <h4 className="PageTitle TableAllignedPageHeader">Order Summary:</h4>
         </Col>
       </Row>
       {DisplayOrderSummary(order)}  

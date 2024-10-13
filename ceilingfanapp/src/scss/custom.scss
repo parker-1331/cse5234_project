@@ -15,6 +15,7 @@ $body-bg: $gray-400;
 * { 
   margin: 0;
   padding: 0;
+  font-family: "Fixedsys";
 }
 
 .navbar {
@@ -33,6 +34,14 @@ $body-bg: $gray-400;
 }
 
 
+.PageTitle {
+  text-decoration: underline overline;
+}
+
+.TableAllignedPageHeader {
+  text-align: center;
+}
+
 
 .btn-primary {
   color: #FFFFFF !important;
@@ -49,6 +58,9 @@ $body-bg: $gray-400;
   background-color: $neon-green !important;
 }
 
+.TableHeader {
+  font-weight: bold;
+}
 
 
 #PageContainer {
@@ -80,6 +92,10 @@ $body-bg: $gray-400;
 
 .bio-pic {
   border: 5px solid $green;
+}
+
+.PriceText {
+  font-family: "Baskerville";
 }
 
 @import "node_modules/bootstrap/scss/bootstrap";

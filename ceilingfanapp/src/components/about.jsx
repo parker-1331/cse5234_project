@@ -6,7 +6,7 @@ const AboutUs = () => {
     <Container className="text-center">
       <Row>
         <Col>
-          <h1>About Us</h1>
+          <h1 className="PageTitle">About Us</h1>
         </Col>
       </Row>
       <Row>

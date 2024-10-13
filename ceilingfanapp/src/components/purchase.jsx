@@ -29,8 +29,8 @@ const Purchase = () => {
 
     return (
         <Container>
-            <h1>Order</h1>
-            <Row>
+            <h1 className="PageTitle text-center">Order</h1>
+            <Row className="TableHeader">
                 <Col><h4>Product</h4></Col>
                 <Col><h4>Price</h4></Col>
                 <Col><h4>Quantity</h4></Col>
@@ -43,7 +43,7 @@ const Purchase = () => {
                                 <Form.Label>{item}</Form.Label>
                             </Col>
                             <Col>
-                                <Form.Label column>${order.price[index]}</Form.Label>
+                                <Form.Label column className="PriceText">${order.price[index]}</Form.Label>
                             </Col>
                             <Col>
                                 <Form.Control type="number" defaultValue="0" min="0" onChange={(e) => {
