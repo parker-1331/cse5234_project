@@ -48,9 +48,21 @@ const AboutUs = () => {
       </Row>
       <Row>
         <Col>
-          <p>(insert image here)</p>
+          <img
+            className="bio-pic"
+            alt=""
+            src="/src/assets/aidan_bio_pic.jpg"
+            width="120"
+            height="150"
+          />
           <h4>Aidan Limle</h4>
           <h5>Chief Financial Officer</h5>
+          <p>
+            Aidan is an undergraduate Computer Science and Engineering major in his last semester at Ohio State.
+            As someone with a history of managing business related finances, he is
+            more than cut out for a finance related position. When he isn't at work,
+            Aidan can be found juggling or reading. 
+          </p>
         </Col>
         <Col>
           <img 
@@ -59,7 +71,6 @@ const AboutUs = () => {
             src="/src/assets/cole_bio_pic.jpg" 
             width="134"
             height="150"
-            
           />
           <h4>Cole Parker</h4>
           <h5>Chief Executive Officer</h5>
