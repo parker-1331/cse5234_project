@@ -9,6 +9,7 @@ const client = axios.create({
 });
 
 const postOrder = (title, body) => {
+  console.log(body)
   client
     .post('', {
       body: body

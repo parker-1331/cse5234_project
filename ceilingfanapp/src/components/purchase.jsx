@@ -20,7 +20,7 @@ const Purchase = () => {
     const handleUpdate = (index, event) => {
         const newQuantity = order.quantity.map((quantity, i) => {
             if(i == index) {
-                return event.target.value;
+                return parseInt(event.target.value);
             } else {
                 return quantity;
             }
