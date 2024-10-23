@@ -2,6 +2,24 @@ import React, { useEffect } from "react";
 import {useLocation, useNavigate} from 'react-router-dom';
 import {Container, Row, Col, Button, Stack, Table} from 'react-bootstrap';
 import { DisplayOrderSummary } from "./confirmation";
+import axios from "axios";
+
+const client = axios.create({
+  baseURL: "https://4hfcxdr784.execute-api.us-east-2.amazonaws.com/dev/order-processing/order"
+});
+
+const postOrder = (title, body) => {
+  client
+    .post('', {
+      body: body
+    })
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
 function SubmitOrder() {
   const navigate = useNavigate();
@@ -9,6 +27,9 @@ function SubmitOrder() {
   const order = location.state.order;
   
   function handleSubmit() {
+
+    postOrder('', location.state);
+
     let confirmationNum = 12345; // Placeholder, eventually need real value here!
 
     navigate(
