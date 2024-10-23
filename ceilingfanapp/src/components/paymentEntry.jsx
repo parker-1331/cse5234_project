@@ -21,7 +21,7 @@ const PaymentEntry = () => {
 
     return (
         <Container>
-          <h1>Payment</h1>
+          <h1 className="PageTitle">Payment</h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="cardNum">
               <Form.Label>Credit Card Number</Form.Label>

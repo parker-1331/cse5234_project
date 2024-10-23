@@ -1,6 +1,7 @@
 import React from "react"
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import './components/a.scss';
 
 const Contact = () => {
 

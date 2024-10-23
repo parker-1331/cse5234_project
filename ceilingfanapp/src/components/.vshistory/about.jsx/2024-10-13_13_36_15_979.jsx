@@ -48,21 +48,9 @@ const AboutUs = () => {
       </Row>
       <Row>
         <Col>
-          <img
-            className="bio-pic"
-            alt=""
-            src="/src/assets/aidan_bio_pic.jpg"
-            width="120"
-            height="150"
-          />
+          <p>(insert image here)</p>
           <h4>Aidan Limle</h4>
           <h5>Chief Financial Officer</h5>
-          <p>
-            Aidan is an undergraduate Computer Science and Engineering major in his last semester at Ohio State.
-            As someone with a history of managing business related finances, he is
-            more than cut out for a finance related position. When he isn't at work,
-            Aidan can be found juggling or reading. 
-          </p>
         </Col>
         <Col>
           <img 
@@ -71,6 +59,7 @@ const AboutUs = () => {
             src="/src/assets/cole_bio_pic.jpg" 
             width="134"
             height="150"
+            
           />
           <h4>Cole Parker</h4>
           <h5>Chief Executive Officer</h5>
@@ -88,19 +77,11 @@ const AboutUs = () => {
             className="bio-pic"
             alt=""
             src="/src/assets/ricky_bio_pic.jpg"
-            width="120"
-            height="150"
+            width="134"
+             height="150"
           />
           <h4>Ricky Wu</h4>
           <h5>Chief Technical Officer</h5>
-          <p>
-            Ricky is a fourth-year majoring in Computer Science and
-            Engineering at the Ohio State University. He has interests in
-            software engineering, with focuses in application development
-            and game design. Outside of programming, he is a speedcuber and
-            serves as an officer for the Ohio State Cube Club, and has 
-            organized and staff official speedcubing competitions in the past.
-          </p>
         </Col>
       </Row>
     </Container>

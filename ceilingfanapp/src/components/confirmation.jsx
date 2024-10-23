@@ -27,7 +27,7 @@ export function DisplayOrderSummary(order) {
     <Container>
       <Row><Col>
     <Table striped>
-      <thead>
+      <thead className="TableHeader">
         <tr>
           <th>Item</th>
           <th>Quantity</th>
@@ -45,7 +45,7 @@ export function DisplayOrderSummary(order) {
             <tr key={index}>
               <td>{name[index]}</td>
               <td>{qty}</td>
-              <td>{price[index]}</td>
+              <td className="PriceText">{price[index]}</td>
             </tr>
           )
         })}
@@ -54,7 +54,7 @@ export function DisplayOrderSummary(order) {
     </Col></Row>
     <Row>
       <Col md={8}><h5>Total</h5></Col>
-      <Col md={4}><h5>${totalCost}</h5></Col>
+      <Col md={4}><h5 className="PriceText">${totalCost}</h5></Col>
     </Row>
     </Container>
     )
@@ -80,7 +80,7 @@ const ViewConfirmation = () => {
       </Row>
       <Row>
         <Col>
-          <h3>Order Summary:</h3>
+          <h3 className="PageTitle TableAllignedPageHeader">Order Summary:</h3>
         </Col>
       </Row>
           {DisplayOrderSummary(location.state.order)}

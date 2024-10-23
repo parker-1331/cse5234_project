@@ -11,6 +11,14 @@ const Purchase = () => {
 
     const navigate = useNavigate();
 
+    const getData = (e) => {
+        axios.get('arn:aws:execute-api:us-east-2:442426872917:4hfcxdr784/*/GET/inventory-management/inventory')
+            .then(res => { 
+                const data = res.data;
+            })
+        console.log("data: ", data);
+    }
+
     const submit = (e) => {
         navigate("/purchase/paymentEntry", { state: { order: order }});
         

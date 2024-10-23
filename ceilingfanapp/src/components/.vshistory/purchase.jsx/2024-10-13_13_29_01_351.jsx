@@ -1,16 +1,14 @@
 import React from "react";
-import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const Purchase = () => {
     const [order, setOrder] = useState({
-        quantity: [0, 0, 0, 0, 0], price: [15, 25, 32, 67, 999999997.98], name: ['Fan', 'Big Fan', 'Deluxe Fan', 'Deluxe Big Fan', 'Extremely Large, Extremely High Quality Fan'], id: [1, 2, 3, 4, 5]
+        quantity: [0, 0, 0, 0, 0], price: [15, 25, 32, 67, 999999997.98], name: ['Fan', 'Big Fan', 'Deluxe Fan', 'Deluxe Big Fan', 'Extremely Large, Extremely High Quality Fan']
     });
 
     const navigate = useNavigate();
-
     const submit = (e) => {
         navigate("/purchase/paymentEntry", { state: { order: order }});
         

@@ -1,13 +1,14 @@
 import React from "react"
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+@use './components/teststyles.scss';
 
 const Contact = () => {
 
     return (
         <Container>
             <br></br>
-            <h1 className="PageTitle">Contact Us</h1>
+            <h1>Contact Us</h1>
             <br></br>
             <b>Need help? We're here for you!</b>
             <p>
