@@ -5,21 +5,22 @@ import { DisplayOrderSummary } from "./confirmation";
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://4hfcxdr784.execute-api.us-east-2.amazonaws.com/dev/order-processing/order"
+  baseURL: "https://4hfcxdr784.execute-api.us-east-2.amazonaws.com/dev"
+  // baseURL: "https://4hfcxdr784.execute-api.us-east-2.amazonaws.com/dev/inventory-management/inventory"
 });
 
 const postOrder = (title, body) => {
   console.log(body)
+  
   client
-    .post('', {
-      body: body
-    })
+    .post('/order-processing/order', body)
     .then((response) => {
       console.log(response);
     })
     .catch((error) => {
       console.log(error);
     });
+    
 }
 
 function SubmitOrder() {
