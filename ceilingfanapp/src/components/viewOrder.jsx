@@ -81,7 +81,7 @@ const ViewOrder = () => {
   const location = useLocation();
   const order = location.state.order;
 
-  console.log(location);
+  // console.log(location);
 
    return (
     <Container fluid>

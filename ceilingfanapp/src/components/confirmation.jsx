@@ -35,7 +35,31 @@ export function DisplayOrderSummary(order) {
         </tr>
       </thead>
       <tbody>
-        {quantity.filter(function(qty) {
+        
+        {quantity.reduce(function(filtered, qty, index) {
+          
+          if (qty > 0) {
+            console.log({"quantity": qty, "index": index});
+            filtered.push(<tr key={index}>
+              <td>{name[index]}</td>
+              <td>{qty}</td>
+              <td className="PriceText">{price[index]}</td>
+            </tr>);
+          }
+          return filtered;
+        }, [])}
+        
+      </tbody>
+    </Table>
+    </Col></Row>
+    <Row>
+      <Col md={8}><h5>Total</h5></Col>
+      <Col md={4}><h5 className="PriceText">${totalCost}</h5></Col>
+    </Row>
+    </Container>
+    )
+    /*
+    {quantity.filter(function(qty) {
           if (qty === 0) {
             return false;
           }
@@ -49,15 +73,7 @@ export function DisplayOrderSummary(order) {
             </tr>
           )
         })}
-      </tbody>
-    </Table>
-    </Col></Row>
-    <Row>
-      <Col md={8}><h5>Total</h5></Col>
-      <Col md={4}><h5 className="PriceText">${totalCost}</h5></Col>
-    </Row>
-    </Container>
-    )
+        */
 }
 
 const ViewConfirmation = () => {
