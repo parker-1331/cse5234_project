@@ -3,7 +3,28 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
+import axios from "axios";
+
 const Purchase = () => {
+    const axiosInstance = axios.create({
+        baseURL: "https://4hfcxdr784.execute-api.us-east-2.amazonaws.com/dev/inventory-management/inventory",
+        headers: { 
+            "Access-Control-Allow-Origin": "*"
+        }
+    })
+
+    var inventory;
+
+    axiosInstance.get("/", {
+        responseType: "json"
+    }).then(function (response) {
+        console.log(response);
+        inventory = JSON.parse(response.data);
+        console.log(inventory);
+    }).catch(function (error) {
+        console.log(error);
+    })
+
     const [order, setOrder] = useState({
         quantity: [0, 0, 0, 0, 0], price: [15, 25, 32, 67, 999999997.98], name: ['Fan', 'Big Fan', 'Deluxe Fan', 'Deluxe Big Fan', 'Extremely Large, Extremely High Quality Fan']
     });
