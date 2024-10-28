@@ -1,12 +1,20 @@
 import React from "react";
-import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 import axios from "axios";
 
 const Purchase = () => {
+    const navigate = useNavigate();
+    var inventory = {};
+
+    //Order definition (really should be refactored)
+    const [order, setOrder] = useState({
+        quantity: [], price: [], name: [], id: []
+    });
+
+    //Axios settings
     const axiosInstance = axios.create({
         baseURL: "https://4hfcxdr784.execute-api.us-east-2.amazonaws.com/dev/inventory-management/inventory",
         headers: { 
@@ -14,30 +22,40 @@ const Purchase = () => {
         }
     })
 
-    var inventory;
+    //React mounts function twice in strict mode (dev)
+    const intialized = useRef(false);
 
-    axiosInstance.get("/", {
-        responseType: "json"
-    }).then(function (response) {
-        console.log(response);
-        inventory = JSON.parse(response.data);
-        console.log(inventory);
-    }).catch(function (error) {
-        console.log(error);
-    })
+    //Call API
+    useEffect(() => {
+        axiosInstance.get("/", {
+            responseType: "json"
+        }).then(function (response) {   
+            if(!intialized.current) {
+                intialized.current = true;
 
-    const [order, setOrder] = useState({
-        quantity: [0, 0, 0, 0, 0], price: [15, 25, 32, 67, 999999997.98], name: ['Fan', 'Big Fan', 'Deluxe Fan', 'Deluxe Big Fan', 'Extremely Large, Extremely High Quality Fan'], id: [1, 2, 3, 4, 5]
-    });
+                //Store inventory data as order itmes   
+                inventory = response.data;
+                for(let item in inventory) {
+                    order.name.push(item);
+                    order.quantity.push(0);
+                    order.price.push(inventory[item].price);
+                    order.id.push(inventory[item].id);
+                }
+                setOrder({...order});
+            }
+        }).catch(function (error) {
+            console.log(error);
+        })
+    }, []);
 
-    const navigate = useNavigate();
-
+    //Order submission
     const submit = (e) => {
-        navigate("/purchase/paymentEntry", { state: { order: order }});
+        navigate("/purchase/paymentEntry", { state: { order: order, axiosInstance: axiosInstance }});
         
         console.log("Quantity: " + order.quantity);
     }
 
+    //Order Update
     const handleUpdate = (index, event) => {
         const newQuantity = order.quantity.map((quantity, i) => {
             if(i == index) {
@@ -47,9 +65,9 @@ const Purchase = () => {
             }
         });
         setOrder({ ...order, quantity: newQuantity });
-
     }
 
+    //React data
     return (
         <Container>
             <h1 className="PageTitle text-center">Order</h1>
