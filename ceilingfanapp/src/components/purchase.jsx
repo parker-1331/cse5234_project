@@ -50,7 +50,7 @@ const Purchase = () => {
 
     //Order submission
     const submit = (e) => {
-        navigate("/purchase/paymentEntry", { state: { order: order, axiosInstance: axiosInstance }});
+        navigate("/purchase/paymentEntry", { state: { order: order }});
         
         console.log("Quantity: " + order.quantity);
     }
