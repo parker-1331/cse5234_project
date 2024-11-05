@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import {createPortal} from "react-dom";
 import {useLocation, useNavigate} from 'react-router-dom';
 import {Container, Row, Col, Button, Modal} from 'react-bootstrap';
 import { DisplayOrderSummary } from "./confirmation";
