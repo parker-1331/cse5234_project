@@ -6,7 +6,6 @@ import axios from "axios";
 
 const client = axios.create({
   baseURL: "https://4hfcxdr784.execute-api.us-east-2.amazonaws.com/dev"
-  // baseURL: "https://4hfcxdr784.execute-api.us-east-2.amazonaws.com/dev/inventory-management/inventory"
 });
 
 
