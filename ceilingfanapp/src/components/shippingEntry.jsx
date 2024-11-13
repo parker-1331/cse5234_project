@@ -6,7 +6,7 @@ import {Container, Form, Button} from 'react-bootstrap';
 const ShippingEntry = () => {
 
     const location = useLocation();
-    const [shipping, setShipping] = useState({ userName: '', addr1: '', addr2: '', city: '', state: '', zip: '', });
+    const [shipping, setShipping] = useState({ userName: '', addr1: '', addr2: '', city: '', state: '', zip: '' });
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
