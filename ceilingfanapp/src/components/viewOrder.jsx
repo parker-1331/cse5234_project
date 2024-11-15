@@ -30,6 +30,7 @@ function SubmitOrder() {
               order: order, payment: location.state.payment, shipping: location.state.shipping}});
       })
       .catch((error) => {
+        console.log("One or more items is not available:")
         console.log(error.response.data); // list of items with lower availability.
         setShowModal(true);
       });
