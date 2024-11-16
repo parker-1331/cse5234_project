@@ -9,7 +9,7 @@ import ShippingEntry from './components/shippingEntry';
 import Contact from './components/contact';
 import AboutUs from './components/about';
 import {Container, Nav, Navbar, Stack, Row, Col} from 'react-bootstrap';
-import logoUrl from '/src/assets/fan-logo-neon.svg?url';
+import logoUrl from './assets/fan-logo-neon.svg';
 
 function App() {
   return (
