@@ -51,7 +51,7 @@ const AboutUs = () => {
           <img
             className="bio-pic"
             alt=""
-            src="/public/aidan_bio_pic.jpg"
+            src="/src/assets/aidan_bio_pic.jpg"
             width="120"
             height="150"
           />
@@ -68,7 +68,7 @@ const AboutUs = () => {
           <img 
             className="bio-pic"
             alt=""
-            src="/public/cole_bio_pic.jpg" 
+            src="/src/assets/cole_bio_pic.jpg" 
             width="134"
             height="150"
           />
@@ -87,7 +87,7 @@ const AboutUs = () => {
           <img
             className="bio-pic"
             alt=""
-            src="/public/ricky_bio_pic.jpg"
+            src="/src/assets/ricky_bio_pic.jpg"
             width="120"
             height="150"
           />
