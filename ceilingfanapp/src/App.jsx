@@ -19,7 +19,7 @@ function App() {
             <Stack direction="horizontal" gap={2}>
             <img
               alt=""
-              src="/src/assets/fan-logo-neon.svg"
+              src="/public/fan-logo-neon.svg"
               width="40"
               height="40"
               className="d-inline-block align-top"
