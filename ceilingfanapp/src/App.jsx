@@ -9,7 +9,6 @@ import ShippingEntry from './components/shippingEntry';
 import Contact from './components/contact';
 import AboutUs from './components/about';
 import {Container, Nav, Navbar, Stack, Row, Col} from 'react-bootstrap';
-import logoUrl from './assets/fan-logo-neon.svg';
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
             <Stack direction="horizontal" gap={2}>
             <img
               alt=""
-              src={logoUrl}
+              src="/src/assets/fan-logo-neon.svg"
               width="40"
               height="40"
               className="d-inline-block align-top"
