@@ -1,5 +1,8 @@
 import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
+import AidanURL from "/src/assets/aidan_bio_pic.jpg";
+import ColeURL from "/src/assets/cole_bio_pic.jpg" ;
+import RickyURL from "/src/assets/ricky_bio_pic.jpg";
 
 const AboutUs = () => {
   return (
@@ -51,7 +54,7 @@ const AboutUs = () => {
           <img
             className="bio-pic"
             alt=""
-            src="/src/assets/aidan_bio_pic.jpg"
+            src={AidanURL}
             width="120"
             height="150"
           />
@@ -68,7 +71,7 @@ const AboutUs = () => {
           <img 
             className="bio-pic"
             alt=""
-            src="/src/assets/cole_bio_pic.jpg" 
+            src={ColeURL}
             width="134"
             height="150"
           />
@@ -87,7 +90,7 @@ const AboutUs = () => {
           <img
             className="bio-pic"
             alt=""
-            src="/src/assets/ricky_bio_pic.jpg"
+            src={RickyURL}
             width="120"
             height="150"
           />
